@@ -9,10 +9,13 @@ var md5 = require('md5');
 // console.log(md5('message'));
 
 var server = http.createServer((req, res) => {
+
+  //console.log('reqqqqqqq', req);
+
   var params = req.url.split('/');
   params.shift(); // throwing out the empty string
   var resource = params.shift().toLowerCase();
-  console.log(resource)
+  console.log('resource1111111', params);
 
   switch(resource) {
     case 'math': require('./math')(params, res); break;

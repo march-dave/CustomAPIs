@@ -5,6 +5,12 @@ module.exports = function(numStrs, res) {
   var year = numStrs[0];
   var month = numStrs[1];
   var day = numStrs[2];
+
+  console.log(year);
+  console.log(month);
+  console.log(day);
+
+  // debugger;¬
   
   var birthDate =  new Date(year, month, day);
   var currentDate = new Date();
@@ -25,7 +31,6 @@ function age(year, month, day) {
     // var days = Math.abs(today.getDate() - targetDate.getDate());
     // var months = Math.abs(today.getMonth() - targetDate.getMonth());
     var years = Math.abs(today.getFullYear() - targetDate.getFullYear());
-
 
     // return years + " " + months + " " + days;
     return years.toString();

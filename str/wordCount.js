@@ -2,18 +2,27 @@
 
 module.exports = function(numStrs, res) {
 
-  // console.log('numStrs: ', numStrs);
+  var str = decodeURIComponent(numStrs[0]);
+  console.log('strs:11111111', str);
 
-  var wordCount = numStrs.length;
+  console.log('numStrs: ', numStrs);
+
+  var array = str.split(' ');
+
+  var wordCount = array.length;
   console.log('wordCount:', wordCount);
 
   var arrChar = [];
-  for (var i=0; i<numStrs.length; i++) {
-      arrChar.push(numStrs[i].length);
+  for (var i=0; i<array.length; i++) {
+      arrChar.push(array[i].length);
   }
 
+  var arrCharCount = 0;
   for (var j=0; j<arrChar.length; j++){
-    console.log('arrChar:', arrChar[j]);
+    // console.log('arrChar:', arrChar[j]);
+      for (var k=0; k<=arrChar[j]; k++) {
+        arrCharCount++;
+      }
   }
 
   var total = 
@@ -24,9 +33,11 @@ module.exports = function(numStrs, res) {
   var avg = total / arrChar.length;
   console.log('avg:', avg);
 
-  var str = decodeURIComponent(numStrs[0]);
-  decodeURIComponent(str);   
+  var ret = 'wordCount: ' + wordCount + '|' + 'avg:' +avg + '|' + 'total:' + total
 
-  res.write(str);
+  // var str = decodeURIComponent(numStrs[0]);
+  // decodeURIComponent(str);   
+
+  res.write(ret);
   res.end('\n');
 }

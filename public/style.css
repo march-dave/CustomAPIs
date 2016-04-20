@@ -16,6 +16,13 @@ body {
 }
 
 #avatar {
-  border: 2px solid;
+  border: 0px solid;
   display: none;
+  width: 0px;
+}
+
+
+#sentenceReturn {
+  width: 500px;
+  height: 200px;
 }

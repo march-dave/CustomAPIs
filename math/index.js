@@ -25,6 +25,27 @@ module.exports = function(params, res) {
       var pow = Math.pow(base, exponent);
       res.write(`${pow}`);
       break;
+
+    case 'sub':
+      var first = params[0];
+      var second = params[1];
+      var sub = parseInt(first) - parseInt(second);
+      res.write(`${sub}`);
+      break;  
+
+    case 'mul':
+      var first = params[0];
+      var second = params[1];
+      var mul = parseInt(first) * parseInt(second);
+      res.write(`${mul}`);
+      break;  
+
+    case 'div':
+      var first = params[0];
+      var second = params[1];
+      var div = first / second;
+      res.write(`${div}`);
+      break;
     case 'sum':
 
       // var sum = params.reduce((acc, num) => {
