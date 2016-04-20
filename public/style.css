@@ -1,0 +1,21 @@
+* {
+  margin: 10px;
+}
+
+body {
+
+    margin: 10px;
+    margin-top: 10px;
+    border: 10px;
+}
+
+.container {
+    margin: 10px;
+    margin-top: 10px;
+    border: 10px;
+}
+
+#avatar {
+  border: 2px solid;
+  display: none;
+}

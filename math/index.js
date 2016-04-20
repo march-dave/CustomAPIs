@@ -26,10 +26,15 @@ module.exports = function(params, res) {
       res.write(`${pow}`);
       break;
     case 'sum':
-      var sum = params.reduce((acc, num) => {
-        return acc + parseInt(num);
-      }, 0);
-      res.write(`${sum}`)
+
+      // var sum = params.reduce((acc, num) => {
+      //   return acc + parseInt(num);
+      // }, 0);
+      // res.write(`${sum}`)
+
+      var sum = require('./sum')(params, res);
+      res.write(`${sum}`);
+
       break;
     default:
       res.write('Default.');
